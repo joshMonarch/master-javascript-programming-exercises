@@ -18,10 +18,32 @@ let currentInventory = [
 ];
 
 function renderInventory(inventory) {
-    // your code here
-    // hint: before you just dive into coding...
-    // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
+  let result = []
+  let shoeInfo = []
+  let designer = ""
+
+  inventory.forEach(item => {
     
+    let values = Object.values(item)
+    designer = values[0]
+
+    values[1].forEach(shoe => {
+
+      shoeInfo = Object.values(shoe)
+      result.push([designer, ...shoeInfo])
+
+    })
+  });
+  
+  return result
+
 }
 
 console.log(renderInventory(currentInventory))
+
+/*  [
+      [designer name, shoe name, price],
+      [designer name, shoe name, price],
+      ...
+    ] 
+*/

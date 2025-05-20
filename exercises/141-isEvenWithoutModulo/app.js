@@ -1,5 +1,5 @@
 function isEvenWithoutModulo(num) {
-    // your code here
+    return (num & 1) === 0;
     
 }
 

@@ -1,5 +1,5 @@
 function isOddWithoutModulo(num) {
-    // your code here
+    return (num & 1) !== 0;
     
 }
 

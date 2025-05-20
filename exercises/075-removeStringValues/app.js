@@ -1,5 +1,8 @@
 function removeStringValues(obj) {
-    // your code here
+    for (const key in obj){
+        typeof obj[key] == 'string' ? delete obj[key] : obj[key]
+    }
+    return obj
     
 }
 

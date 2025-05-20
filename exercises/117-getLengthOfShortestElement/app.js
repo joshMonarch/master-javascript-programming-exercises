@@ -1,5 +1,6 @@
 function getLengthOfShortestElement(arr) {
-    // your code here
+    if (arr.length == 0){return 0}
+    return Math.min(...arr.map(x => x.length))
     
 }
 

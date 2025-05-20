@@ -1,1 +1,3 @@
-// Write your function here
+function keep(arr, n){
+    return arr.filter( num => num == n)
+}

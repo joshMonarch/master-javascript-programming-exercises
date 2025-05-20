@@ -1,5 +1,10 @@
 function getAllKeys(obj) {
-  // your code here
+  let result = []
+
+  for (const [key, _] of Object.entries(obj)){
+    result.push(key)
+  }
+  return result
   
 }
 

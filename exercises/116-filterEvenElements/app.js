@@ -1,5 +1,5 @@
 function filterEvenElements(arr) {
-    // your code here
+    return arr.filter(x => x % 2 == 0)
     
 }
 

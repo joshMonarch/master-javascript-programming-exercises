@@ -1,6 +1,11 @@
 function detectOutlierValue(string) {
-    // your code here
-    
+    let arr = string.split(" ")
+    let evens = arr.filter(x => x%2 === 0);
+    if(evens.length === 1) {
+        return arr.findIndex(x=> x%2 === 0)+1; 
+    } else {
+        return arr.findIndex(x=>x%2===1)+1; 
+    }
 }
 
 // Third number is odd, while the rest of the numbers are even

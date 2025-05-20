@@ -1,5 +1,7 @@
 function findShortestElement(arr) {
-    // your code here
+    if (arr.length == 0){return ""}
+    let lengths = arr.map(x => x.length)
+    return arr[lengths.indexOf(Math.min(...lengths))]
 
 }
 

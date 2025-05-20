@@ -18,8 +18,23 @@ let currentInventory = [
 ];
 
 function getLaceNameDataForShoes(inventory) {
-    // your code here
-    
+  let result = []
+  let nameWords = []
+  let targetWordIndex = 0
+
+  for (const item of inventory){
+    for (const shoe of item['shoes']){
+      let name = shoe['name']
+  
+      if (name.includes('lace')){
+        nameWords = name.split(" ")
+        targetWordIndex = nameWords.findIndex(word => word.includes('lace'))
+      
+      } else { continue }
+      result.push({'nameWords': nameWords, 'targetWordIndex': targetWordIndex})
+    }
+  }
+  return result
 }
 
 console.log(getLaceNameDataForShoes(currentInventory));

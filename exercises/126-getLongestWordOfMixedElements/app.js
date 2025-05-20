@@ -1,5 +1,10 @@
 function getLongestWordOfMixedElements(arr) {
-    // your code here
+    let countStrings = arr.filter(x => typeof x === 'string').length
+    if (arr.length == 0 || countStrings == 0){return ""}
+    
+    let lengths = arr.map(x => typeof x !== 'string' ? x.toString().length: x.length)
+
+    return arr[lengths.indexOf(Math.max(...lengths))]
     
 }
 

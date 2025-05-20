@@ -1,5 +1,11 @@
 function computeSummationToN(n) {
-  // your code here
+  let acc = 0
+
+  while(n != 0){
+    acc += n
+    n--
+  }
+  return acc
   
 }
 

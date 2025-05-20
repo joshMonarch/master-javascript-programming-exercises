@@ -5,6 +5,12 @@ let obj = {
 }
 
 function removeNumbersLargerThan(num, obj) {
-    // your code here
-    
+    for (const key in obj){
+        if (Number.isInteger(obj[key]) && obj[key] > num){
+            delete obj[key]
+        }
+    }
+    return obj
 }
+
+console.log(removeNumbersLargerThan(3, obj))

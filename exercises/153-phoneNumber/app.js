@@ -4,23 +4,23 @@ function PhoneNumberFormatter(numbers) {
 
 PhoneNumberFormatter.prototype.render = function() {
   let string = '';
-  // your code here
+  string = string.concat(this.parenthesize(this.getAreaCode()), " ", this.getExchangeCode(), "-", this.getLineNumber())
   
   return string;
 };
 
 PhoneNumberFormatter.prototype.getAreaCode = function() {
-  // your code here
+  return this.slice(0, 3)
   
 };
 
 PhoneNumberFormatter.prototype.getExchangeCode = function() {
-  // your code here
+  return this.slice(3, 6)
   
 };
 
 PhoneNumberFormatter.prototype.getLineNumber = function() {
-  // your code here
+  return this.slice(6, 10)
   
 };
 

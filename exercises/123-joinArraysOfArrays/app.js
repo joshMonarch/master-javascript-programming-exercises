@@ -1,5 +1,5 @@
 function joinArrayOfArrays(arr) {
-  // your code here
+  return arr.flatMap(x => x)
   
 }
 

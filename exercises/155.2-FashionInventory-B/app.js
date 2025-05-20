@@ -18,7 +18,30 @@ let currentInventory = [
 ];
 
 function renderAverageCostPerDesigner(inventory) {
-    // your code here
+    let result = []
+    let avgInfo = []
+    let avg = 0
+    
+    inventory.forEach(item => {
+
+      avgInfo.push([Object.keys(item)[0], Object.values(item)[0]])
+      let sum = 0
+      let shoes = Object.values(item)[1]
+      
+      shoes.forEach(shoe => {
+        
+        let price = Object.entries(shoe)[1][1]
+        sum += price
+        
+      })
+
+      avg = sum/shoes.length
+      avgInfo.push(["averagePrice", avg])
+
+      result.push(Object.fromEntries(avgInfo))
+
+    });
+    return result
   
 }
 

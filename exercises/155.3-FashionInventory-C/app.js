@@ -18,7 +18,23 @@ let currentInventory = [
   ];
 
 function renderInventory(shoeList) {
-    // your code here
+    let result = []
+    let blackColored = []
+    let name = ""
+
+    for (const item of shoeList){
+      name = item['name']
+
+      for (const shoe of item['shoes']){
+
+        if(shoe['name'].includes('black')){
+          blackColored = Object.values(shoe)
+        }
+      }
+      result.push([name,...blackColored])
+    }
+    if (blackColored.length == 0){ return [] }
+    return result
     
 }
 

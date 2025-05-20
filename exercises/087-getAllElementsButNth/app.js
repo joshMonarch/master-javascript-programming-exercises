@@ -1,6 +1,6 @@
 function getAllElementsButNth(array, n) {
-    // your code here
-
+    let newArray = array.filter(num => array.indexOf(num) !== n)
+    return newArray
 }
 
 let output = getAllElementsButNth(['a', 'b', 'c'], 1);

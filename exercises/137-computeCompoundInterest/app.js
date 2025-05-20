@@ -1,6 +1,5 @@
 function computeCompoundInterest(principal, interestRate, compoundingFrequency, timeInYears) {
-  // your code here
-  
+    return principal * (1 + (interestRate/compoundingFrequency))**(timeInYears*compoundingFrequency) - principal
 }
 
 let output = computeCompoundInterest(1500, .043, 4, 6);

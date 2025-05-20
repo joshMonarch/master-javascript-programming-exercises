@@ -1,6 +1,15 @@
 function flipPairs(input) {
-    // your code here
-    
+    const chars = input.split('');
+    const len = chars.length;
+    let result = []
+    for (let i = 0; i<(len-1); i+=2) {
+        result.push(chars[i+1])
+        result.push(chars[i])
+    }
+    if(input.length % 2 != 0){
+        result.push(input.slice(-1))
+    }
+    return result.join('')
 }
 
 let input = "Can you see what this is about?";
